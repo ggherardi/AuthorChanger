@@ -28,40 +28,47 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dialogChoosePath = new System.Windows.Forms.OpenFileDialog();
-            this.btnChoosePath = new System.Windows.Forms.Button();
+            this.buttonPath = new System.Windows.Forms.Button();
+            this.textboxPath = new System.Windows.Forms.TextBox();
+            this.folderbrowserPath = new System.Windows.Forms.FolderBrowserDialog();
             this.SuspendLayout();
             // 
-            // dialogChoosePath
+            // buttonPath
             // 
-            this.dialogChoosePath.FileName = "openFileDialog1";
+            this.buttonPath.Location = new System.Drawing.Point(18, 38);
+            this.buttonPath.Name = "buttonPath";
+            this.buttonPath.Size = new System.Drawing.Size(75, 23);
+            this.buttonPath.TabIndex = 0;
+            this.buttonPath.Text = "Path";
+            this.buttonPath.UseVisualStyleBackColor = true;
+            this.buttonPath.Click += new System.EventHandler(this.btnChoosePath_Click);
             // 
-            // btnChoosePath
+            // textboxPath
             // 
-            this.btnChoosePath.Location = new System.Drawing.Point(191, 38);
-            this.btnChoosePath.Name = "btnChoosePath";
-            this.btnChoosePath.Size = new System.Drawing.Size(75, 23);
-            this.btnChoosePath.TabIndex = 0;
-            this.btnChoosePath.Text = "button1";
-            this.btnChoosePath.UseVisualStyleBackColor = true;
-            this.btnChoosePath.Click += new System.EventHandler(this.btnChoosePath_Click);
+            this.textboxPath.Enabled = false;
+            this.textboxPath.Location = new System.Drawing.Point(93, 40);
+            this.textboxPath.Name = "textboxPath";
+            this.textboxPath.Size = new System.Drawing.Size(206, 20);
+            this.textboxPath.TabIndex = 1;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(311, 454);
-            this.Controls.Add(this.btnChoosePath);
+            this.Controls.Add(this.textboxPath);
+            this.Controls.Add(this.buttonPath);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.OpenFileDialog dialogChoosePath;
-        private System.Windows.Forms.Button btnChoosePath;
+        private System.Windows.Forms.Button buttonPath;
+        private System.Windows.Forms.TextBox textboxPath;
+        private System.Windows.Forms.FolderBrowserDialog folderbrowserPath;
     }
 }
 

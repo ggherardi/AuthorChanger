@@ -19,7 +19,8 @@ namespace AuthorChanger
 
         private void btnChoosePath_Click(object sender, EventArgs e)
         {
-            dialogChoosePath.ShowDialog();
+            folderbrowserPath.ShowDialog();
+            textboxPath.Text = folderbrowserPath.SelectedPath;
         }
     }
 }
